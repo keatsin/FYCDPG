@@ -3,12 +3,17 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import {makeStyles, Button} from "@material-ui/core";
-
+import bgimg from '../public/bbe3559b-3585-4c7a-91ba-10706bd81a53.jpeg';
+import './index.css';
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
     fontSize:24,
     fontWeight: 'bold',
+  },
+  container:{
+    color:'#fff',
+    textShadow:'1px 2px 0px black;'
   }
 }));
 
@@ -18,7 +23,7 @@ export default function App() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Typography variant="h6">
+        <Typography variant="h6" className={classes.container}>
           發一崇德多倫多
           <br />
           仁德佛堂 智德佛堂 興德佛堂 義德佛堂
