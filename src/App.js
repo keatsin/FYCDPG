@@ -3,7 +3,6 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import {makeStyles, Button} from "@material-ui/core";
-import bgimg from '../public/bbe3559b-3585-4c7a-91ba-10706bd81a53.jpeg';
 import './index.css';
 const useStyles = makeStyles(theme => ({
   button: {
