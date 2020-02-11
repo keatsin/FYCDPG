@@ -22,16 +22,22 @@ const useStyles = makeStyles(theme => ({
     margin:'15px 0',
   },
   container: {
+    fontSize: 20,
     color: "#fff",
     textShadow: "1px 2px 0px black;",
     padding: 10,
-    backgroundColor:'rgba(0,0,0,0.5)'
+    backgroundColor:'rgba(0,0,0,0.5)',
+    margin:'15px 0',
   },
   bottomConainter: {
     color: "#fff",
     textShadow: "1px 2px 0px black;",
     padding: 10,
     backgroundColor:'rgba(30,144,255,0.5)'
+  },
+  goalSpan:{
+    color: 'rgba(240, 52, 52, 1)',
+    fontSize: 15,
   }
 }));
 
@@ -58,23 +64,30 @@ const App = () => {
           <br />
           誦經累計次數3600次數10800遍
           <br />
-          晚餐吃素＆晚上8點恭誦彌勒救苦真經三遍
+          晚餐吃素＆
+          <br />
+          晚上8點恭誦彌勒救苦真經三遍
           <br />
           參加者誦經前請點擊一次計數器連結
           <br />
-          把愛串起來 凝聚您我慈悲之心 叩求諸天仙佛撥轉
+          把愛串起來 凝聚您我慈悲之心 
           <br />
-          感動上天 挽化疫情止息 天下眾生平安
+          叩求諸天仙佛撥轉 感動上天
+          <br />
+          挽化疫情止息 天下眾生平安
           <br />
         </Typography>
         <Box
           bgcolor="warning.main"
           display="flex"
-          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
           p={3}
         >
           <Typography variant="h5">累計次數：{localCount}</Typography>
+          <span className={classes.goalSpan}>距離目標還有：{localCount - 3600} 次</span>
         </Box>
+
         <Box display="flex" justifyContent="center">
           <Button
             variant="contained"
