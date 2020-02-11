@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor:'rgba(30,144,255,0.5)'
   },
   goalSpan:{
-    color: 'rgba(240, 52, 52, 1)',
+    color: 'rgba(200, 52, 52, 1)',
     fontSize: 15,
   }
 }));
@@ -95,7 +95,7 @@ const App = () => {
             onClick={() => updateRemoteCounter()}
             className={classes.button}
           >
-            🙏我已經完成誦經🙏
+          👉 我已經完成誦經 🙏
           </Button>
         </Box>
         <Typography variant="h6" className={classes.bottomConainter}>
