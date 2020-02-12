@@ -42,9 +42,21 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
     backgroundColor: "rgba(30,144,255,0.5)"
   },
+  DialogRoot: {
+    backgroundColor: "#f5b501"
+  },
   goalSpan: {
     color: "rgba(230, 52, 52, 1)",
     fontSize: 15
+  },
+  DialogContent: {
+    fontSize: "28px"
+  },
+  DialogActions: {
+    justifyContent: "center"
+  },
+  buttonSubmit: {
+    fontSize: "15px"
   }
 }));
 
@@ -71,9 +83,6 @@ const App = () => {
     rootRef.child("counter").set(localCount + 1);
     setOpen(false);
   };
-
-
-
 
   return (
     <Container maxWidth="sm">
@@ -127,12 +136,11 @@ const App = () => {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          classes={{ paper: classes.DialogRoot }}
         >
-          <DialogTitle id="alert-dialog-title">
-          迴向文：
-          </DialogTitle>
+          <DialogTitle id="alert-dialog-title">迴向文：</DialogTitle>
           <DialogContent>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.DialogContent}>
               願以此誦經功德迴向
               <br />
               平息新冠狀肺炎疫情
@@ -140,8 +148,13 @@ const App = () => {
               眾生平安
             </Typography>
           </DialogContent>
-          <DialogActions>
-            <Button onClick={completedDJ} color="primary">
+          <DialogActions className={classes.DialogActions}>
+            <Button
+              variant="outlined"
+              onClick={completedDJ}
+              color="secondary"
+              className={classes.buttonSubmit}
+            >
               我願意將誦經功德迴向給受苦難的眾生
             </Button>
           </DialogActions>
