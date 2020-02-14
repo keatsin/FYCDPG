@@ -80,7 +80,7 @@ const App = () => {
   };
 
   const completedDJ = () => {
-    rootRef.child("counter").set(localCount + 1);
+    rootRef.child("counter").set(Number(localCount + 1));
     setOpen(false);
   };
 
@@ -127,7 +127,7 @@ const App = () => {
             onClick={() => handleClickOpen()}
             className={classes.button}
           >
-            🙏 我已經完成誦經 🙏
+            🙏完成誦經三遍，請按此🙏
           </Button>
         </Box>
 
@@ -141,21 +141,21 @@ const App = () => {
           <DialogTitle id="alert-dialog-title">迴向文：</DialogTitle>
           <DialogContent>
             <Typography variant="h6" className={classes.DialogContent}>
-              願以此誦經功德迴向
+              願迴向此誦經功德
               <br />
               平息新冠狀肺炎疫情
               <br />
-              眾生平安
+              願眾生平安
             </Typography>
           </DialogContent>
           <DialogActions className={classes.DialogActions}>
             <Button
-              variant="outlined"
+              variant="contained"
               onClick={completedDJ}
               color="secondary"
               className={classes.buttonSubmit}
             >
-              我願意將誦經功德迴向給受苦難的眾生
+              完成功德迴向，請按此
             </Button>
           </DialogActions>
         </Dialog>
