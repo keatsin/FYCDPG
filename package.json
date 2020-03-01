@@ -1,5 +1,5 @@
 {
-  "name": "DJCounter",
+  "name": "DJNYCounter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,5 +20,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://imakou.github.io/DJCounter"
+  "homepage": "http://imakou.github.io/DJNYCounter"
 }
